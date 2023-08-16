@@ -1,0 +1,45 @@
+$primary-rgb: 0 0 0;
+
+#nfSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  #_404 {
+    color: rgb($primary-rgb);
+    font-size: 200px;
+    margin-block: 3rem;
+    font-weight: 700;
+  }
+  .linkToHome {
+    color: rgb($primary-rgb);
+    font-size: 20px;
+    margin-block: 3rem;
+    border-bottom: 2px solid rgb($primary-rgb);
+  }
+}
+
+#Oups {
+  color: rgb($primary-rgb);
+  font-size: 50px;
+  margin-block: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 630px) {
+  #nfSection {
+    #_404 {
+      font-size: 200px;
+    }
+    .linkToHome {
+      font-size: 15px;
+      margin-block: 3rem;
+    }
+  }
+  #Oups {
+    font-size: 30px;
+  }
+}

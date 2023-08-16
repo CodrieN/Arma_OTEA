@@ -1,0 +1,35 @@
+.section1 {
+  position: relative;
+
+  #img0 {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-block: 2rem;
+    filter: brightness(70%);
+  }
+}
+#partout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 630px) {
+  .section1 {
+    #img0 {
+      height: 110px;
+    }
+  }
+  #partout {
+    font-size: 20px;
+    left: 35%;
+    text-align: initial;
+  }
+}
