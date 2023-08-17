@@ -8,7 +8,9 @@ $primary-rgb: 0 0 0;
   gap: 1rem;
 
   #_404 {
-    color: rgb($primary-rgb);
+    background: -webkit-linear-gradient(0deg, #0077ff, #ffffff, #ff001e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 200px;
     margin-block: 3rem;
     font-weight: 700;

@@ -1,19 +1,12 @@
 import React from "react";
-// import Gallery from "./../../components/Gallery/Gallery";
-// import Banner from "./../../components/Banner/Banner";
+
 import "./Home.scss";
 
 function Home() {
   return (
     <>
-      <section className="section1">
-        {/* <Banner
-          imgSrc="/img/Plage.png"
-          imgId="img0"
-          imgAlt="Plage"
-          partoutText="Chez vous, partout et ailleurs"
-        /> */}
-      </section>
+      <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
+      <section className="section1"></section>
       <section id="section2">{/* <Gallery /> */}</section>
     </>
   );

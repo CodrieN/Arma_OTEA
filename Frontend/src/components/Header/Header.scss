@@ -1,19 +1,9 @@
-$primary-rgb: 200 200 200;
+$primary-rgb: 240 240 240;
 $secondary-rgb: 0 0 0;
-.logo-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
 nav {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(255, 255, 255, 1) 95%
-  );
+  font-family: "Black Ops One", sans-serif;
+  background-color: rgb($secondary-rgb);
   color: rgb($primary-rgb);
   display: flex;
   flex-direction: column;
@@ -23,6 +13,12 @@ nav {
   padding-bottom: 4rem;
   gap: 1rem;
   white-space: nowrap;
+  i {
+    padding: 1rem;
+    background: -webkit-linear-gradient(0deg, #0077ff, #ffffff, #ff001e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .divNav {
     display: flex;
@@ -31,7 +27,22 @@ nav {
   }
 
   .active {
-    border-bottom: 5px solid rgb($primary-rgb);
+    scale: 1.5;
+    transition: all 0.3s ease;
+  }
+  #auth {
+    font-family: "Quantico", sans-serif;
+    font-size: 2rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    padding-inline: 2rem;
+    a {
+      height: 2rem;
+    }
   }
 }
 
@@ -43,15 +54,14 @@ nav {
       gap: 0.8rem;
       padding-left: 0.8rem;
       align-items: center;
+      flex-direction: row;
     }
 
     .logo-link {
       display: flex;
-      flex-direction: row;
     }
     img {
-      margin-left: -1rem;
-      transform: scale(0.8); /* Reduce the size of the image by 80% */
+      transform: scale(0.5); /* Reduce the size of the image by 80% */
     }
   }
 }
