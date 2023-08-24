@@ -141,6 +141,14 @@ a:active {
 a {
   color: inherit;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#010c22, #002a5a);
+}
+
 #Flex {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,31 @@
+/* 1 */
+.btn-1 {
+  background: rgb(226, 226, 228);
+  background: linear-gradient(
+    0deg,
+    rgb(200, 201, 221) 0%,
+    rgb(205, 207, 228) 100%
+  );
+  border: none;
+  width: 170px;
+  height: 40px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 1rem;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(3, 233, 244, 0.5),
+    7px 7px 20px 0px #03e9f4, 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  text-align: center;
+}
+.btn-1:hover {
+  background: rgb(242, 242, 245);
+  background: linear-gradient(0deg, rgb(3, 233, 244) 0%, rgb(3, 233, 244) 100%);
+  color: black;
+}

@@ -9,10 +9,10 @@ function Header() {
     <header>
       <nav>
         <div id="auth">
-          <NavLink to="/login">
+          <NavLink to="/Auth">
             <i class="fa-solid fa-arrow-right-to-bracket"></i>Se connecter
           </NavLink>
-          <NavLink to="/signup">
+          <NavLink to="/Auth">
             <i class="fa-solid fa-user-plus"></i>S'inscrire
           </NavLink>
         </div>
@@ -34,14 +34,19 @@ function Header() {
               <i class="fa-solid fa-gamepad"></i>Jeux
             </Btn>
           </NavLink>
-          <NavLink to="/opérations" className="active-link">
+          <NavLink to="/Operations" className="active-link">
             <Btn>
               <i class="fa-solid fa-jet-fighter"></i> Opérations
             </Btn>
           </NavLink>
-          <NavLink to="/forum" className="active-link">
+          <NavLink to="/Forum" className="active-link">
             <Btn>
               <i class="fa-solid fa-walkie-talkie"></i> Forum
+            </Btn>
+          </NavLink>
+          <NavLink to="/Gallery" className="active-link">
+            <Btn>
+              <i class="fa-solid fa-camera"></i> Galerie
             </Btn>
           </NavLink>
         </div>

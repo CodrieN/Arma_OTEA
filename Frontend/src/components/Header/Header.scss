@@ -15,7 +15,16 @@ nav {
   white-space: nowrap;
   i {
     padding: 1rem;
-    background: -webkit-linear-gradient(0deg, #0077ff, #ffffff, #ff001e);
+    background: -webkit-linear-gradient(
+      0deg,
+      #0077ff,
+      #0077ff,
+      #0077ff,
+      #ffffff,
+      #ff001e,
+      #ff001e,
+      #ff001e
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -27,8 +36,10 @@ nav {
   }
 
   .active {
-    scale: 1.5;
+    scale: 1.2;
     transition: all 0.3s ease;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
   }
   #auth {
     font-family: "Quantico", sans-serif;
