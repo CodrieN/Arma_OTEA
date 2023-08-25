@@ -1,5 +1,5 @@
 /* 1 */
-.btn-1 {
+.btn2 {
   background: rgb(226, 226, 228);
   background: linear-gradient(
     0deg,
@@ -24,7 +24,8 @@
   outline: none;
   text-align: center;
 }
-.btn-1:hover {
+.btn2.active,
+.btn2:hover {
   background: rgb(242, 242, 245);
   background: linear-gradient(0deg, rgb(3, 233, 244) 0%, rgb(3, 233, 244) 100%);
   color: black;
