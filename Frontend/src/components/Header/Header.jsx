@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Btn from "../Btn/Btn";
 import "./Header.scss";
 
@@ -9,12 +9,10 @@ function Header() {
     <header>
       <nav>
         <div id="auth">
-          <NavLink to="/Auth">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>Se connecter
-          </NavLink>
-          <NavLink to="/Auth">
-            <i class="fa-solid fa-user-plus"></i>S'inscrire
-          </NavLink>
+          <Link to="/Auth">
+            <i class="fa-solid fa-user-plus"></i>Bar Ouf
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </Link>
         </div>
         <img alt="" src={logo} />
 

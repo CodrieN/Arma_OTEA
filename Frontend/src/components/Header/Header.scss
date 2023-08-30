@@ -36,7 +36,18 @@ nav {
   }
 
   .active {
-    scale: 1.2;
+    background: -webkit-linear-gradient(
+      0deg,
+      #0077ff,
+      #0077ff,
+      #0077ff,
+      #ffffff,
+      #ffffff,
+      #ffffff,
+      #ff001e,
+      #ff001e,
+      #ff001e
+    );
     transition: all 0.3s ease;
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
       0 0 100px #03e9f4;

@@ -2,7 +2,6 @@
   width: 170px;
   height: 40px;
   color: #000000;
-  border-radius: 5px;
   padding: 10px 25px;
   font-weight: 500;
   background: transparent;
@@ -63,7 +62,6 @@
 
       &:hover {
         color: rgba(2, 126, 251, 1);
-        font-family: "Rubik Glitch", sans-serif;
       }
     }
 
@@ -73,18 +71,24 @@
       content: "";
       right: 0;
       top: 0;
-      background: rgba(2, 126, 251, 1);
-      transition: all 0.3s ease;
-    }
-
-    &:before {
-      height: 0%;
-      width: 2px;
+      background: -webkit-linear-gradient(
+        0deg,
+        #0077ff,
+        #0077ff,
+        #0077ff,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #ff001e,
+        #ff001e,
+        #ff001e
+      );
+      transition: all 0.5s ease;
     }
 
     &:after {
       width: 0%;
-      height: 2px;
+      height: 5px;
     }
 
     &:hover {
