@@ -15,7 +15,7 @@ function Auth() {
             <input type="password" name="password" required={true} />
             <label htmlFor="password">Mot de passe</label>
           </div>
-          <a href="#">
+          <a href="#" id="letsgo">
             <span></span>
             <span></span>
             <span></span>

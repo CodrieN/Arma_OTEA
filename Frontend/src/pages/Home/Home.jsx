@@ -72,7 +72,7 @@ function Home() {
         <h2>SERVEUR</h2>
         <div id="serveur">
           <ul>
-            nous disposons ainsi de 2 serveurs:
+            nous disposons de 2 serveurs:
             <li>d'une domination publique</li>
             <li>d'un serveur privé et/ou semi privé avec invitation</li>
             <a
@@ -87,9 +87,9 @@ function Home() {
           </ul>
           <div>
             <iframe
+              title="GameTracker"
               src="https://cache.gametracker.com/components/html0/?host=195.154.170.15:2302&bgColor=00000f&fontColor=2196f3&titleBgColor=00000f&titleColor=ffffff&borderColor=00000f&linkColor=ffa07a&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=240"
               frameborder="0"
-              scrolling="no"
               width="240"
               height="412"
             ></iframe>
