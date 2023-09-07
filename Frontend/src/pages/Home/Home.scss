@@ -1,17 +1,21 @@
-h2 {
+h2,
+h3,
+h2 i {
   font-size: 2rem;
-  font-family: "Quantico", sans-serif;
+  font-family: "Black Ops One";
   color: rgb(255, 255, 255);
   text-align: center;
   margin: 2rem;
+  padding-inline: 0.5rem;
 }
-.section1 {
+#section1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
   gap: 2rem;
+  font-size: 1.5rem;
 }
 
 #text {
@@ -24,14 +28,57 @@ h2 {
   text-align: justify;
   margin: 2rem;
 }
+#section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
 
-#serveur {
+#topPic2 {
+  height: 5rem;
+  background: rgb(0, 21, 52);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 21, 52, 1) 13%,
+    rgba(14, 34, 65, 1) 66%
+  );
+}
+#bottomPic2 {
+  height: 5rem;
+  background: rgb(28, 48, 80);
+  background: linear-gradient(
+    180deg,
+    rgba(28, 48, 80, 1) 33%,
+    rgba(1, 26, 60, 1) 66%
+  );
+}
+.mainPic2 {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+#serveur,
+#rules {
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 85%;
   height: auto;
+}
+
+.rules {
+  text-decoration: underline;
+  font-family: "Black Ops One";
+  padding-right: 0.5rem;
+}
+.TK {
+  color: red;
 }
 
 @keyframes spin {

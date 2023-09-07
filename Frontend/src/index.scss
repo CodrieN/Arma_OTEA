@@ -155,6 +155,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 }
+
 .mainPic {
   position: absolute;
   z-index: -10;
@@ -162,4 +163,10 @@ body {
   width: 100%;
   object-fit: cover;
   opacity: 0.2;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-top: 1.5rem;
 }

@@ -3,6 +3,13 @@ import "./Operations.scss";
 function Operations() {
   return (
     <>
+      <p id="firstp">
+        LoremLoremLoremLoremLoremLorem LoremLoremLoremL oremLoremLoremLoremLor
+        emLoremLoremLorem Lore mLoremLoremLoremLoremLoremLoremLoremLo
+        remLoremLoremLorem oremLoremLoremLo remLore mLoremLoremLoremLor
+        emLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem
+        LoremLorem
+      </p>
       <svg height="171.4" width="400" viewBox="0 0 400 171.4">
         <defs>
           <mask id="mapMask">
@@ -4070,12 +4077,15 @@ function Operations() {
           </svg>
         </g>
       </svg>
-      <p id="white">
-        LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLore
+
+      <div className="white">
+        LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem
+        LoremLore
         mLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLore
         mLoremLoremLoremLor
         emLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem
-      </p>
+      </div>
+      <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
     </>
   );
 }
