@@ -10,7 +10,7 @@ function Header() {
       <nav>
         <div id="auth">
           <Link to="/Auth">
-            <i class="fa-solid fa-user-plus"></i>Bar Ouf
+            <i class="fa-solid fa-user-plus"></i>Caserne OTEA
             <i class="fa-solid fa-arrow-right-to-bracket"></i>
           </Link>
         </div>

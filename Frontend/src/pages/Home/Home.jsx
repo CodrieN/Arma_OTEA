@@ -30,7 +30,7 @@ function Home() {
     }
   };
 
-  const text = `Foondée en l'an 2011, la Team a pris forme avec une vision claire : celle de réunir des individus passionnés, unis par le plaisir de se rassembler autour du jeu ARMA. Son aventure a pris son envol sur les vastes étendues d'ARMA 2, et au fil du temps, elle s'est métamorphosée au rythme du jeu lui-même.<br><br>Fiers de compter en nos rangs une douzaine de membres, notre dévotion envers l'art de l'infanterie nous guide de par les contrées variées de toutes les opérations militaires.<br><br> Tel des virtuoses de l'action, nous nous déployons avec ferveur sur des terrains d'action variés, où nous façonnons le déroulement de missions exaltantes. Assauts audacieux, déchaînements destructeurs et évacuations cruciales sont autant de défis que nous embrassons avec passion et adresse.<br><br>Au fil des ans, notre histoire s'est tissée avec les fils d'ARMA, chaque bataille gravée dans nos mémoires comme autant de chapitres palpitants. Animés par un esprit indomptable, nous avons suivi l'évolution du jeu avec détermination, nous adaptant aux nouvelles opportunités et aux défis émergents. Nous sommes bien plus qu'un simple groupe de joueurs, nous sommes une communauté soudée par la camaraderie, la stratégie et la recherche perpétuelle de l'excellence tactique.<br><br>Alors que nous continuons de tracer notre chemin au sein de l'univers en constante évolution d'ARMA, notre équipe demeure un exemple vivant de la façon dont la passion, l'amitié et l'expérience peuvent fusionner pour créer des moments inoubliables sur le champ de bataille virtuel. Chaque opération est une toile sur laquelle nous peignons notre dévouement, et chaque succès est une étoile brillante dans notre constellation de victoires.`;
+  const text = `Foondée en  2011, la Team a pris forme avec une vision claire : celle de réunir des individus passionnés, unis par le plaisir de se rassembler autour des jeux ARMA. Son aventure a pris son envol sur les vastes étendues d'ARMA 2, et au fil du temps, elle s'est métamorphosée au rythme du jeu lui-même.<br><br>Fiers de compter en nos rangs une douzaine de membres, notre dévotion envers l'art de l'infanterie nous guide de par les contrées variées de toutes les opérations militaires.<br><br> Tel des virtuoses de l'action, nous nous déployons avec ferveur sur des terrains d'action variés, où nous façonnons le déroulement de missions exaltantes. Assauts audacieux, déchaînements destructeurs et évacuations cruciales sont autant de défis que nous embrassons avec passion et adresse.<br><br>Au fil des ans, notre histoire s'est tissée avec les fils d'ARMA, chaque bataille gravée dans nos mémoires comme autant de chapitres palpitants. Animés par un esprit indomptable, nous avons suivi l'évolution du jeu avec détermination, nous adaptant aux nouvelles opportunités et aux défis émergents. Nous sommes bien plus qu'un simple groupe de joueurs, nous sommes une communauté soudée par la camaraderie, la stratégie et la recherche perpétuelle de l'excellence tactique.<br><br>Alors que nous continuons de tracer notre chemin au sein de l'univers en constante évolution d'ARMA, notre équipe demeure un exemple vivant de la façon dont la passion, l'amitié et l'expérience peuvent fusionner pour créer des moments inoubliables sur le champ de bataille virtuel. Chaque opération est une toile sur laquelle nous peignons notre dévouement, et chaque succès est une étoile brillante dans notre constellation de victoires.`;
 
   useEffect(() => {
     let index = 0;
@@ -54,7 +54,6 @@ function Home() {
         activeSection={activeSection}
       />
       <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
-
       <section ref={sectionRefs[0]} id="section1">
         <h2>
           <i class="fa-solid fa-fingerprint"></i>PRESENTATION
@@ -139,6 +138,7 @@ function Home() {
             </li>
           </ul>
         </div>
+        <div id="topVideo"></div>
         <ReactPlayer
           url="https://www.youtube.com/watch?v=MUa2HmMuYSI&t=30s"
           playing="true"
@@ -154,6 +154,20 @@ function Home() {
           <i class="fa-solid fa-server"></i>
         </h2>
         <div id="serveur">
+          <p className="white">
+            L'équipe OTEA, depuis sa création, met à disposition des joueurs
+            d'ARMA2 et d'ARMA3 des serveurs publics de jeu et un serveur
+            Teamspeak3. Sur ces serveurs de jeu tournent différentes missions ;
+            un serveur en mode sans addons avec une Domination pour ARMA2 , et
+            deux autres pour ARMA3, en mode sans addons également avec sur l'un
+            une Domination et sur l'autre une PvP TeeTimeWarfare. Il est bon de
+            rappeler que l'existence de ces serveurs n'est pas due à la bonté
+            d'un quelconque mécène, mais bien à la prise en charge de leurs
+            coûts par les membres de l'équipe OTEA. Alors oui, venir jouer en
+            toute liberté sur ces serveurs, ça a l'air d'être sympa puisqu'on y
+            voit beaucoup de monde, mais devenir membre de l'équipe OTEA, c'est
+            mieux...
+          </p>
           <ul>
             nous disposons de 2 serveurs:
             <li>d'une domination publique</li>
@@ -170,11 +184,12 @@ function Home() {
           </ul>
           <div>
             <iframe
-              title="GameTracker"
-              src="https://cache.gametracker.com/components/html0/?host=195.154.170.15:2302&bgColor=00000f&fontColor=2196f3&titleBgColor=00000f&titleColor=ffffff&borderColor=00000f&linkColor=ffa07a&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=240"
+              src="https://cache.gametracker.com/components/html0/?host=195.154.170.15:2302&bgColor=002653&fontColor=ffffff&titleBgColor=002856&titleColor=ffffff&borderColor=002856&linkColor=d10000&borderLinkColor=002653&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&topPlayersHeight=100&showTopPlayers=1&showBlogs=0&width=144"
               frameborder="0"
-              width="240"
-              height="412"
+              title="tracker"
+              scrolling="no"
+              width="144"
+              height="515"
             ></iframe>
           </div>
         </div>

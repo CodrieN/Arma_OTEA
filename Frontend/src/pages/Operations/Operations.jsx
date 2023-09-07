@@ -10,7 +10,7 @@ function Operations() {
         emLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem
         LoremLorem
       </p>
-      <svg height="171.4" width="400" viewBox="0 0 400 171.4">
+      <svg height="900" width="400" viewBox="0 0 400 171.4">
         <defs>
           <mask id="mapMask">
             <g classname="dots" fill="#fff">
