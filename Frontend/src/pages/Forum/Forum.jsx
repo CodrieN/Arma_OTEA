@@ -4,6 +4,7 @@ function Forum() {
   return (
     <>
       <div className="container"></div>
+      <img src="./img/Pimouss.webp" alt="mainPic" className="mainPic" />
     </>
   );
 }

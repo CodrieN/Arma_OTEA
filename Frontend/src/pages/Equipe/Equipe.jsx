@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Trombi from "../../components/Trombi/Trombi";
 import SecondaryNav from "../../components/SecondaryNav/SecondaryNav";
 import "./Equipe.scss";
 
@@ -36,7 +37,7 @@ function Equipe() {
         activeSection={activeSection}
       />
       <img src="./img/Eagle.webp" alt="mainPic" className="mainPic" />
-      <section ref={sectionRefs[0]} className="section1">
+      <section ref={sectionRefs[0]} className="section1" id="equipe">
         <h2>EQUIPE</h2>
         <p className="white">
           L'équipe OTEA est composée d'une douzaine de membres. La passion du
@@ -59,7 +60,7 @@ function Equipe() {
       </section>
       <section ref={sectionRefs[1]} className="section2">
         <h2>ORGANISATION</h2>
-        <p className="white">test</p>
+        <Trombi></Trombi>
       </section>
       <section ref={sectionRefs[2]} className="section3">
         <h2>ORGANISATION</h2>

@@ -30,6 +30,40 @@ function Home() {
     }
   };
 
+  const handleScroll = () => {
+    // Find the section currently in view
+    for (let i = 0; i < sectionRefs.length; i++) {
+      if (
+        sectionRefs[i].current &&
+        isElementInViewport(sectionRefs[i].current)
+      ) {
+        setActiveSection(i);
+        break;
+      }
+    }
+  };
+
+  // Helper function to check if an element is in the viewport
+  const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= window.innerHeight &&
+      rect.right <= window.innerWidth
+    );
+  };
+
+  useEffect(() => {
+    // Add scroll event listener to handle section visibility
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // Remove the scroll event listener when the component unmounts
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const text = `Foondée en  2011, la Team a pris forme avec une vision claire : celle de réunir des individus passionnés, unis par le plaisir de se rassembler autour des jeux ARMA. Son aventure a pris son envol sur les vastes étendues d'ARMA 2, et au fil du temps, elle s'est métamorphosée au rythme du jeu lui-même.<br><br>Fiers de compter en nos rangs une douzaine de membres, notre dévotion envers l'art de l'infanterie nous guide de par les contrées variées de toutes les opérations militaires.<br><br> Tel des virtuoses de l'action, nous nous déployons avec ferveur sur des terrains d'action variés, où nous façonnons le déroulement de missions exaltantes. Assauts audacieux, déchaînements destructeurs et évacuations cruciales sont autant de défis que nous embrassons avec passion et adresse.<br><br>Au fil des ans, notre histoire s'est tissée avec les fils d'ARMA, chaque bataille gravée dans nos mémoires comme autant de chapitres palpitants. Animés par un esprit indomptable, nous avons suivi l'évolution du jeu avec détermination, nous adaptant aux nouvelles opportunités et aux défis émergents. Nous sommes bien plus qu'un simple groupe de joueurs, nous sommes une communauté soudée par la camaraderie, la stratégie et la recherche perpétuelle de l'excellence tactique.<br><br>Alors que nous continuons de tracer notre chemin au sein de l'univers en constante évolution d'ARMA, notre équipe demeure un exemple vivant de la façon dont la passion, l'amitié et l'expérience peuvent fusionner pour créer des moments inoubliables sur le champ de bataille virtuel. Chaque opération est une toile sur laquelle nous peignons notre dévouement, et chaque succès est une étoile brillante dans notre constellation de victoires.`;
 
   useEffect(() => {
@@ -56,8 +90,8 @@ function Home() {
       <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
       <section ref={sectionRefs[0]} id="section1">
         <h2>
-          <i class="fa-solid fa-fingerprint"></i>PRESENTATION
-          <i class="fa-solid fa-fingerprint"></i>
+          <i className="fa-solid fa-fingerprint"></i>PRESENTATION
+          <i className="fa-solid fa-fingerprint"></i>
         </h2>
         <p id="text" dangerouslySetInnerHTML={{ __html: displayText }} />
       </section>
@@ -70,8 +104,8 @@ function Home() {
       <div id="bottomPic2"></div>
       <section ref={sectionRefs[1]} id="section2">
         <h2>
-          <i class="fa-solid fa-gavel"></i>REGLES
-          <i class="fa-solid fa-gavel"></i>
+          <i className="fa-solid fa-gavel"></i>REGLES
+          <i className="fa-solid fa-gavel"></i>
         </h2>
 
         <h3>Les dix règles à respecter par tous!</h3>
@@ -150,8 +184,8 @@ function Home() {
       </section>
       <section ref={sectionRefs[2]} id="section3">
         <h2>
-          <i class="fa-solid fa-server"></i>SERVEUR
-          <i class="fa-solid fa-server"></i>
+          <i className="fa-solid fa-server"></i>SERVEUR
+          <i className="fa-solid fa-server"></i>
         </h2>
         <div id="serveur">
           <p className="white">
@@ -194,33 +228,174 @@ function Home() {
           </div>
         </div>
       </section>
-      <section ref={sectionRefs[3]} id="section4"></section>
-      <p>
-        lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
-        sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
-        ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
-        ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
-        dolor sit amet{" "}
-      </p>
+      <section ref={sectionRefs[3]} id="section4">
+        <h2>
+          <i class="fa-solid fa-gamepad"></i>JOUER AVEC NOUS
+          <i class="fa-solid fa-gamepad"></i>
+        </h2>
+        <p className="white">
+          lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
+          sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
+          ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit amet{" "}
+        </p>
+        <p className="white">
+          lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
+          sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
+          ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit amet{" "}
+        </p>
+        <p className="white">
+          lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
+          sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
+          ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit amet{" "}
+        </p>
+        <p className="white">
+          lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
+          sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
+          ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit amet{" "}
+        </p>{" "}
+        <p className="white">
+          lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
+          sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
+          ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit amet{" "}
+        </p>
+        <p className="white">
+          lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor
+          sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem
+          ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit
+          ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum
+          dolor sit ametlorem ipsum dolor sit amet{" "}
+        </p>
+      </section>
     </>
   );
 }

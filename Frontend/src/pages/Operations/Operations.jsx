@@ -4085,7 +4085,7 @@ function Operations() {
         mLoremLoremLoremLor
         emLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem
       </div>
-      <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
+      <img src="./img/Black.webp" alt="mainPic" className="mainPic" />
     </>
   );
 }

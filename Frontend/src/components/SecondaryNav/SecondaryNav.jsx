@@ -6,16 +6,17 @@ function SecondaryNav(props) {
   const { buttons, onButtonClick, activeSection } = props;
 
   return (
-    <div className="SecondaryNav">
+    <aside className="SecondaryNav">
       {buttons.map((buttonText, index) => (
         <Btn2
           key={index}
           buttonText={buttonText}
           onClick={() => onButtonClick(index)}
-          isActive={activeSection === index} // Pass the isActive prop here
+          isActive={activeSection === index}
+          index={index} // Pass the index to Btn2
         />
       ))}
-    </div>
+    </aside>
   );
 }
 
