@@ -4,6 +4,7 @@ import "./Auth.scss";
 function Auth() {
   return (
     <>
+      <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
       <div className="login-box">
         <h2>Connection</h2>
         <form>

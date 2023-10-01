@@ -56,7 +56,25 @@ nav {
     }
   }
 }
-
+#bottomPicHeader {
+  width: 105%;
+  height: 0.1rem;
+  background: rgb(0, 21, 52);
+  background: linear-gradient(
+    270deg,
+    transparent,
+    transparent,
+    #ff001e81,
+    #ff001e81,
+    #ff001e81,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #0077ff7e,
+    #0077ff7e,
+    #0077ff7e
+  );
+}
 @media (max-width: 630px) {
   nav {
     font-size: medium;

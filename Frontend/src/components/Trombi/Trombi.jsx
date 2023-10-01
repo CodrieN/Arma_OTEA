@@ -321,8 +321,7 @@ function Trombi() {
               vendredi ! Vous êtes prévenus !
             </div>
           </div>
-        </div>{" "}
-        -->
+        </div>
       </div>
     </>
   );

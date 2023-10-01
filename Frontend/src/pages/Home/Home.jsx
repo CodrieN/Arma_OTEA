@@ -87,7 +87,7 @@ function Home() {
         onButtonClick={scrollToSection}
         activeSection={activeSection}
       />
-      <img src="./img/Mad.webp" alt="mainPic" className="mainPic" />
+      <img src="./img/Halo_1.WEBP" alt="mainPic" className="mainPic" />
       <section ref={sectionRefs[0]} id="section1">
         <h2>
           <i className="fa-solid fa-fingerprint"></i>PRESENTATION
@@ -96,11 +96,7 @@ function Home() {
         <p id="text" dangerouslySetInnerHTML={{ __html: displayText }} />
       </section>
       <div id="topPic2"></div>
-      <img
-        src="./img/20210402214735_1.jpg"
-        alt="mainPic"
-        className="mainPic2"
-      />
+      <img src="./img/first.webp" alt="mainPic" className="mainPic2" />
       <div id="bottomPic2"></div>
       <section ref={sectionRefs[1]} id="section2">
         <h2>

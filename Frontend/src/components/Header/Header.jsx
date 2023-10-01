@@ -10,8 +10,8 @@ function Header() {
       <nav>
         <div id="auth">
           <Link to="/Auth">
-            <i class="fa-solid fa-user-plus"></i>Caserne OTEA
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <i class="fa-solid fa-user-plus fa-fade"></i>Caserne OTEA
+            <i class="fa-solid fa-arrow-right-to-bracket fa-fade"></i>
           </Link>
         </div>
         <img alt="" src={logo} />
@@ -49,6 +49,7 @@ function Header() {
           </NavLink>
         </div>
       </nav>
+      <div id="bottomPicHeader"></div>
     </header>
   );
 }
